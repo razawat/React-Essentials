@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 * {
   box-sizing: border-box;
 }
 
 body {
   background: radial-gradient(#280a48, #20043d);
+  color: #ebe7ef;
+  line-height: 1.5;
 }
 
 /* Start ---> Header Component CSS */
@@ -39,3 +41,54 @@ body {
 }
 
 /* End ---> Header Component CSS */
+
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+#coreConcept {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #140524;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#coreConcept h2 {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
+}
+
+#coreConcept ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#coreConcept li {
+  width: 10rem;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+
+#coreConcept li img {
+  height: 4rem;
+  width: 6rem;
+  object-fit: cover;
+}
+
+#coreConcept li h3 {
+  margin: 0.5rem 0;
+}
+
+#coreConcept li p {
+  font-size: 0.9rem;
+}
