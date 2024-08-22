@@ -1,13 +1,20 @@
 import Header from "./Component/header.jsx";
+import ConceptDescription from "./Component/conceptDescription.jsx";
 import CoreConcept from "./Component/coreConcept.jsx";
-
-import data from "./data.json";
+import { useState } from "react";
+import {data} from "./data.js";
 import componentImg from "./assets/images/components.png";
 import jsxImg from "./assets/images/jsx-ui.png";
 import stateImg from "./assets/images/state-mgmt.png";
 import propsImg from "./assets/images/config.png";
 
 export default function App() {
+  const [tabContent, showTabContent] = useState(false);
+
+  function handleTabButton(type) {
+    showTabContent(type);
+  }
+
   return (
     <>
       <header>
@@ -47,7 +54,49 @@ export default function App() {
             </li>
           </ul>
         </section>
-        <section></section>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <li>
+              <button
+                onClick={() => handleTabButton("components")}
+                className={tabContent == "components" ? "active" : ""}
+              >
+                Components
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleTabButton("jsx")}
+                className={tabContent == "jsx" ? "active" : ""}
+              >
+                JSX
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleTabButton("props")}
+                className={tabContent == "props" ? "active" : ""}
+              >
+                Props
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleTabButton("state")}
+                className={tabContent == "state" ? "active" : ""}
+              >
+                State
+              </button>
+            </li>
+          </menu>
+        </section>
+        {tabContent && (
+          <section id="conceptDescription">
+            <ConceptDescription content={data[tabContent]} />
+          </section>
+        )}
+        {!tabContent && <p>Please select a content</p>}
       </main>
     </>
   );

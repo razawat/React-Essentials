@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function CoreConcept({ name, description, image }) {
   console.log("Image: ", image);
   return (
@@ -8,3 +10,9 @@ export default function CoreConcept({ name, description, image }) {
     </>
   );
 }
+
+CoreConcept.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};

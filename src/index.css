@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -8,6 +8,20 @@ body {
   background: radial-gradient(#280a48, #20043d);
   color: #ebe7ef;
   line-height: 1.5;
+  padding-bottom: 15rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
 }
 
 /* Start ---> Header Component CSS */
@@ -42,11 +56,7 @@ body {
 
 /* End ---> Header Component CSS */
 
-main {
-  width: 90%;
-  max-width: 50rem;
-  margin: auto;
-}
+/* Start ---> Core concept component css*/
 
 #coreConcept {
   padding: 2rem;
@@ -57,9 +67,6 @@ main {
 
 #coreConcept h2 {
   text-align: center;
-  font-family: "Roboto Condensed", sans-serif;
-  margin: 0 0 1.5rem 0;
-  color: #a18aba;
 }
 
 #coreConcept ul {
@@ -78,7 +85,6 @@ main {
   font-family: "Quicksand", sans-serif;
 }
 
-
 #coreConcept li img {
   height: 4rem;
   width: 6rem;
@@ -92,3 +98,66 @@ main {
 #coreConcept li p {
   font-size: 0.9rem;
 }
+
+/* End ---> Core concept component css*/
+
+/* Start ---> example css*/
+
+#examples {
+  margin: 2rem auto;
+}
+
+#examples menu {
+  display: flex;
+  list-style: none;
+  margin: 1rem 0;
+  gap: 2rem;
+  padding: 0rem;
+}
+
+#examples menu button {
+  background-color: transparent;
+  color: #a18aba;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+#examples menu button:hover {
+  background-color: #1b082f;
+  color: #ebe7ef;
+}
+
+#examples menu button.active {
+  background-color: #7925d3;
+  color: #ebe7ef;
+}
+
+/* End ---> example css*/
+
+/* Start ---> Concept description css*/
+
+#conceptDescription {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #2f1d43;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#conceptDescription h3 {
+  margin: 0rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+#conceptDescription p {
+  font-family: "Quicksand", sans-serif;
+}
+
+#conceptDescription code {
+  font-size: 1rem;
+}
+
+/* End ---> Concept description css*/
